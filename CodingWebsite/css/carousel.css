@@ -1,0 +1,80 @@
+.carousel-container{
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height:500px;
+    overflow:hidden;
+}
+.carousel-slide{
+    display:flex;
+    flex-direction: row;
+    position: absolute;
+    width:100%;
+    justify-content: center;
+    align-content: center;
+    z-index: -1;
+    transform: translateY(-25px);
+}
+#prevBtn{
+    height: 100%;
+    width:20%;
+    position: absolute;
+    z-index: 0;
+    background-color: rgb(10, 10, 10,0.5);
+    font-size: 100px;
+    color:white;
+    transition: 0.5s;
+    left:0px;
+}
+#prevBtn:hover{
+    background-color: rgb(10, 10, 10,0.9);
+    font-size:120px;
+}
+#nextBtn{
+    height: 100%;
+    width:20%;
+    position: absolute;
+    z-index: 0;
+    background-color: rgb(10, 10, 10,0.5);
+    font-size: 100px;
+    color:white;
+    right:0%;
+    transition: 0.5s;
+}
+#nextBtn:hover{
+    background-color: rgb(10, 10, 10,0.9);
+    font-size:120px;
+}
+
+.picActive{
+    transform: translateX(0%);
+}
+.picNoneActive{
+    left:-100%;
+}
+@media screen and (max-width:768px){
+/*resize the image when teh screen size gets to mobile size*/
+
+}
+
+@keyframes carouselSlideOutRight{
+    from{
+        display:block;
+        transform: translateX(0%);
+    }
+    to{
+        display:none;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes carouselSlideInRight{
+    from{
+        display:none;
+        transform: translateX(-100%);
+    }
+    to{
+        display:block;
+        transform: translateX(0%);
+    }
+}
